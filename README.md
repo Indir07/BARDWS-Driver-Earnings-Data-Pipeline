@@ -10,6 +10,9 @@ This repository implements a local-first, privacy-compliant data pipeline that m
 4.  **Data Quality Validation:** Auto-generates a validation report checking schema conformance, duplicates, missingness, and outlier flags.
 5.  **Analytics & Visualization:** Provides an analytics notebook analyzing day-of-week and monthly driver earnings trends.
 
+### Pipeline Architecture
+![BARDWS Pipeline Architecture](bardws_pipeline_architecture.png)
+
 ## 2. Directory Structure
 
 ```text
@@ -80,3 +83,15 @@ This script will:
 ### 4.2 Enrichment Rules
 -   Weather daily summaries (from IMD Bengaluru) are matched to driver logs strictly on dates.
 -   Daily fuel prices are filtered to IndianOil Petrol to establish a uniform fuel expense baseline.
+
+## 5. Analytics & Visualizations
+The pipeline's final enriched dataset supports downstream analytical profiling of driver earnings. The provided notebook (`03_notebook/bardws_notebook_analytics_v1_2026-06-22.ipynb`) generates key insights into earnings patterns:
+
+### Day of Week Earnings Analysis
+Analyzing daily median gross fare collections across Bengaluru demand zones:
+![Day of Week Earnings](03_notebook/day_of_week_earnings.png)
+
+### Monthly Earnings Trend
+Lineage and trend analysis tracking the monthly growth, fuel prices, and weather impact on driver take-home earnings:
+![Monthly Earnings Trend](03_notebook/monthly_earnings_trend.png)
+
