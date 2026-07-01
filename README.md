@@ -23,12 +23,12 @@ DA-009/
     ├── bardws_join_driver_v1_2026-06-22.py         # Joining/enrichment stage
     └── bardws_validate_data_v1_2026-06-22.py       # Quality validation stage
   02_datasets/                    # Output datasets (D-02, D-03)
-    ├── bardws_dataset_aggregator-earnings_v1_[date].csv
-    ├── bardws_dataset_aggregator-earnings_v1_[date].parquet
-    ├── bardws_dataset_driver-enriched_v1_[date].csv
-    ├── bardws_dataset_driver-enriched_v1_[date].parquet
+    ├── bardws_dataset_aggregator-earnings_v1.csv
+    ├── bardws_dataset_aggregator-earnings_v1.parquet
+    ├── bardws_dataset_driver-enriched_v1.csv
+    ├── bardws_dataset_driver-enriched_v1.parquet
     ├── bardws_data_dictionary_v1_2026-06-22.md     # Schemas & lineage
-    └── bardws_validation_report_v1_[date].md       # QC report
+    └── bardws_validation_report_v1.md              # QC report
   03_notebook/                    # Deliverable notebook (D-04)
     └── bardws_notebook_analytics_v1_2026-06-22.ipynb
   assets/                         # Raw input data (unmodified)
@@ -38,24 +38,17 @@ DA-009/
     └── weather/                  # Bengaluru daily weather CSV
   LICENSE                         # MIT Open Source License
   README.md                       # Documentation (D-05)
+  requirements.txt                # Pinned dependencies
   run_pipeline.py                 # Pipeline Orchestrator (one command)
 ```
 
 ## 3. Getting Started
 
 ### 3.1 Pinned Dependencies
-The pipeline requires Python 3.12+ and the following packages:
-```text
-pandas==2.2.2
-numpy==1.26.4
-pyarrow==16.1.0
-pypdf==4.2.0
-matplotlib==3.8.4
-seaborn==0.13.2
-```
-To install these dependencies, run:
+The pipeline requires Python 3.12+ and dependencies pinned in `requirements.txt`.
+To install all required packages, run:
 ```bash
-pip install pandas numpy pyarrow pypdf matplotlib seaborn
+pip install -r requirements.txt
 ```
 
 ### 3.2 Running the Pipeline
