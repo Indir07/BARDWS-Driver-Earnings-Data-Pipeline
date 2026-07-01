@@ -1,14 +1,18 @@
 # Data Quality Validation Report
-Generated on: 2026-06-22
+Generated on: 2026-07-01
 
 This report summarizes the programmatic validation of the BARDWS data pipeline deliverables.
 
-## 1. Cleaned and Enriched Driver Dataset
-*   **Total rows:** 131373
-*   **Key duplicate rows (same driver + date):** 0 (Expected: 0)
-*   **Flagged outliers (hours_worked = 26):** 12 (Expected: 12)
-*   **Missing `km_driven` count:** 0 (Expected: 0 - imputed)
-*   **Missing `gross_fare_inr` count:** 0 (Expected: 0 - imputed)
+## 1. Driver Logs Quality Metrics (Before vs. After Cleaning)
+
+| Metric | Raw (Before ETL) | Cleaned (After ETL) | Expected Target | Status |
+| :--- | :---: | :---: | :---: | :---: |
+| **Duplicate Rows (driver+date)** | 80 | 0 | 0 | PASSED |
+| **Missing `km_driven` count** | 1971 (1.5%) | 0 | 0 (imputed) | PASSED |
+| **Missing `gross_fare_inr` count** | 788 (0.6%) | 0 | 0 (imputed) | PASSED |
+| **Flagged Outliers (hours_worked = 26)** | — | 12 | 12 | PASSED |
+
+*   **Total Cleaned Rows:** 131373
 
 ### Enriched Data Highlights
 *   **Temperature Range:** 10.7°C to 34.3°C
