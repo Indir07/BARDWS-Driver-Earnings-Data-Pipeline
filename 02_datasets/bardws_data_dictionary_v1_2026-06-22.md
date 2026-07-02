@@ -8,7 +8,7 @@ This document serves as the data dictionary, schema specification, and source li
 ---
 
 ## 1. Normalized Aggregator Earnings Table
-**File Name:** `bardws_dataset_aggregator-earnings_v1.(parquet|csv)`  
+**File Name:** `bardws_dataset_aggregator-earnings_v1_2026-06-22.(parquet|csv)`  
 **Purpose:** Normalizes and merges ride-level and weekly earnings summaries extracted from Uber, Ola, Rapido, and Namma Yatri PDF statements.
 
 ### 1.1 Schema & Data Dictionary
@@ -37,7 +37,7 @@ This document serves as the data dictionary, schema specification, and source li
 ---
 
 ## 2. Cleaned and Enriched Driver Dataset
-**File Name:** `bardws_dataset_driver-enriched_v1.(parquet|csv)`  
+**File Name:** `bardws_dataset_driver-enriched_v1_2026-06-22.(parquet|csv)`  
 **Purpose:** Cleans the anonymised driver daily activity log and enriches it with local weather data and retail fuel prices.
 
 ### 2.1 Schema & Data Dictionary

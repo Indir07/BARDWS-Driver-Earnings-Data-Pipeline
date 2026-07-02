@@ -294,8 +294,8 @@ def main():
     out_dir = "02_datasets"
     os.makedirs(out_dir, exist_ok=True)
     
-    parquet_path = os.path.join(out_dir, "bardws_dataset_aggregator-earnings_v1.parquet")
-    csv_path = os.path.join(out_dir, "bardws_dataset_aggregator-earnings_v1.csv")
+    parquet_path = os.path.join(out_dir, "bardws_dataset_aggregator-earnings_v1_2026-06-22.parquet")
+    csv_path = os.path.join(out_dir, "bardws_dataset_aggregator-earnings_v1_2026-06-22.csv")
     
     df.to_parquet(parquet_path, index=False)
     df.to_csv(csv_path, index=False)

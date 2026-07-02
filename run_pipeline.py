@@ -45,8 +45,8 @@ def join_and_enrich_driver_logs(join, driver_tidied, out_dir):
     print(f"Joined and enriched driver logs: {len(driver_enriched)} rows.")
     
     # Save final enriched driver dataset deterministically
-    driver_parquet_path = os.path.join(out_dir, "bardws_dataset_driver-enriched_v1.parquet")
-    driver_csv_path = os.path.join(out_dir, "bardws_dataset_driver-enriched_v1.csv")
+    driver_parquet_path = os.path.join(out_dir, "bardws_dataset_driver-enriched_v1_2026-06-22.parquet")
+    driver_csv_path = os.path.join(out_dir, "bardws_dataset_driver-enriched_v1_2026-06-22.csv")
     
     driver_enriched.to_parquet(driver_parquet_path, index=False)
     driver_enriched.to_csv(driver_csv_path, index=False)
@@ -69,7 +69,7 @@ def run_pipeline():
     
     # Load the generated aggregator table to validate later
     out_dir = "02_datasets"
-    agg_csv_path = os.path.join(out_dir, "bardws_dataset_aggregator-earnings_v1.csv")
+    agg_csv_path = os.path.join(out_dir, "bardws_dataset_aggregator-earnings_v1_2026-06-22.csv")
     agg_df = pd.read_csv(agg_csv_path)
     
     # 3. Stage 2: Load and tidy driver logs
@@ -82,7 +82,7 @@ def run_pipeline():
     
     # 5. Stage 4: Run validation check and generate report
     print("\n[Stage 4] Running data quality validations...")
-    report_path = os.path.join(out_dir, "bardws_validation_report_v1.md")
+    report_path = os.path.join(out_dir, "bardws_validation_report_v1_2026-06-22.md")
     success = validate.validate_datasets(agg_df, driver_enriched, report_path, raw_stats)
     
     print("\n" + "="*50)

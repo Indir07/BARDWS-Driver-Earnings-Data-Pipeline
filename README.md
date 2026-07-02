@@ -23,12 +23,12 @@ DA-009/
     ├── bardws_join_driver_v1_2026-06-22.py         # Joining/enrichment stage
     └── bardws_validate_data_v1_2026-06-22.py       # Quality validation stage
   02_datasets/                    # Output datasets (D-02, D-03)
-    ├── bardws_dataset_aggregator-earnings_v1.csv
-    ├── bardws_dataset_aggregator-earnings_v1.parquet
-    ├── bardws_dataset_driver-enriched_v1.csv
-    ├── bardws_dataset_driver-enriched_v1.parquet
+    ├── bardws_dataset_aggregator-earnings_v1_2026-06-22.csv
+    ├── bardws_dataset_aggregator-earnings_v1_2026-06-22.parquet
+    ├── bardws_dataset_driver-enriched_v1_2026-06-22.csv
+    ├── bardws_dataset_driver-enriched_v1_2026-06-22.parquet
     ├── bardws_data_dictionary_v1_2026-06-22.md     # Schemas & lineage
-    └── bardws_validation_report_v1.md              # QC report
+    └── bardws_validation_report_v1_2026-06-22.md   # QC report
   03_notebook/                    # Deliverable notebook (D-04)
     └── bardws_notebook_analytics_v1_2026-06-22.ipynb
   assets/                         # Raw input data (unmodified)
@@ -61,7 +61,7 @@ This script will:
 2. Load and tidy member driver logs (remove 80 duplicates, flag 12 outliers, impute missing metrics).
 3. Merge driver activity logs with daily weather and IndianOil Petrol prices.
 4. Export Parquet and CSV versions of both tables to the 02_datasets/ directory.
-5. Generate a markdown quality report (02_datasets/bardws_validation_report_v1_[date].md) certifying that the output passed all validations.
+5. Generate a markdown quality report (02_datasets/bardws_validation_report_v1_2026-06-22.md) certifying that the output passed all validations.
 
 ## 4. Pipeline Logic & Data Cleaning
 
